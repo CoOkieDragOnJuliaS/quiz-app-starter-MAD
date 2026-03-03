@@ -9,6 +9,7 @@ import org.junit.Assert.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
+//REALLY ONLY UNIT TESTS, folder structure is weird
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {

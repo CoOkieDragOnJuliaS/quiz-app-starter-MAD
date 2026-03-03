@@ -13,6 +13,7 @@ import org.junit.Assert.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
+//INTEGRATION TESTS, better structure in another project, folder structure is weird
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
     @Test
