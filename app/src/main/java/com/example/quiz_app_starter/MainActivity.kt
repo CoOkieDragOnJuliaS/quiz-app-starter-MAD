@@ -53,10 +53,22 @@ class MainActivity : ComponentActivity() {  //kann als Activity verwendet werden
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
                     contentColor = MaterialTheme.colorScheme.background
+                    //TopBar und BottomBar
+                    topBar = {
+
+                    },
+                    bottomBar = {
+
+                    }
+                    //MainBereich, den wir sehen ist innerPadding
                 ) { innerPadding ->
-                    MainMenuScreen(
+                    /*MainMenuScreen(
                         bestScore = 12,
                         modifier = Modifier.padding(innerPadding)
+                    )*/
+                    //New Component / Composable from QuestionScreen.kt
+                    QuestionScreen (
+
                     )
                 }
             }
