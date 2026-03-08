@@ -1,5 +1,6 @@
 package com.example.quiz_app_starter
 
+import QuestionScreen
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -50,27 +51,28 @@ class MainActivity : ComponentActivity() {  //kann als Activity verwendet werden
         enableEdgeToEdge()
         setContent {
             QuizappstarterTheme {   //Komponente { with a lot of parameters, a lot of Lambda expressions }
-                Scaffold(
+               Scaffold(
                     modifier = Modifier.fillMaxSize(),
                     contentColor = MaterialTheme.colorScheme.background
                     //TopBar und BottomBar
-                    topBar = {
+                    /*topBar = {
 
                     },
                     bottomBar = {
 
-                    }
-                    //MainBereich, den wir sehen ist innerPadding
+                    }*/
                 ) { innerPadding ->
-                    /*MainMenuScreen(
+                   {
+                   }
+                   /*MainMenuScreen(
                         bestScore = 12,
                         modifier = Modifier.padding(innerPadding)
                     )*/
-                    //New Component / Composable from QuestionScreen.kt
-                    QuestionScreen (
-
-                    )
-                }
+                   //New Component / Composable from QuestionScreen.kt
+                   QuestionScreen(
+                       modifier = Modifier.padding(innerPadding)
+                   )
+               }
             }
         }
     }

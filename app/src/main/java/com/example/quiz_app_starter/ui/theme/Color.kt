@@ -3,7 +3,13 @@ package com.example.quiz_app_starter.ui.theme
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.Cyan
 import androidx.compose.ui.graphics.Color.Companion.Green
+val Purple40 = Color(0xFF7E57C2)
+val PurpleGrey40 = Color(0xFF8E24AA)
+val Pink40 = Color(0xFFEC407A)
 
+val Purple80 = Color(0xFFB39DDB)
+val PurpleGrey80 = Color(0xFFC5CAE9)
+val Pink80 = Color(0xFFF48FB1)
 //Hier ändern und dann laden
 // Light theme
 val LightPrimary = Color(0xFF6200EE)
