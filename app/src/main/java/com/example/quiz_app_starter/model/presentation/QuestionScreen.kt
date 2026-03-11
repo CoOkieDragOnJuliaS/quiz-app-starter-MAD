@@ -1,3 +1,4 @@
+import android.R
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -10,13 +11,21 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ExitToApp
+import androidx.compose.material3.BottomAppBar
+import androidx.compose.material3.Button
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.RadioButtonDefaults
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -63,7 +72,7 @@ fun ProgressIndicator() {
         modifier = Modifier
             .fillMaxWidth()
             .height(16.dp),
-        color = MaterialTheme.colorScheme.secondary,
+        color = MaterialTheme.colorScheme.primary,
         strokeCap = StrokeCap.Round,
         trackColor = Color.LightGray
     )
@@ -124,10 +133,55 @@ fun Answers(questions: List<Question>, index: Int) {
 }
 
 //Preview Screen
+@OptIn(ExperimentalMaterial3Api::class)
 @Preview(showBackground = true, name = "QuestionScreenPreview")
 @Composable
 fun QuestionScreenPreview() {
-    QuizappstarterTheme {
-        QuestionScreen(modifier = Modifier)
+    QuizappstarterTheme {   //Komponente { with a lot of parameters, a lot of Lambda expressions }
+        Scaffold(
+            modifier = Modifier.fillMaxSize(),
+            contentColor = MaterialTheme.colorScheme.primaryContainer,
+            //TopBar und BottomBar
+            topBar = {
+                TopAppBar(
+                    title = {
+                        Text(
+                            text = "Quiz App",
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                    },
+                    actions = {
+                        IconButton(onClick = {
+                            //going back?
+                        }) {
+                            Icon(
+                                imageVector = Icons.AutoMirrored.Filled.ExitToApp,
+                                contentDescription = "Back",
+                                tint = MaterialTheme.colorScheme.primary
+                            )
+                        }
+                    }
+                )
+            },
+            bottomBar = {
+                BottomAppBar {
+                    Button(
+                        onClick = {
+                            //what to do when click?
+                        },
+                        modifier = Modifier
+                            .background(MaterialTheme.colorScheme.background)
+                            .fillMaxWidth()
+                            .padding(8.dp)
+                    ) {
+                        Text("Submit")
+                    }
+                }
+            }
+        ) { innerPadding ->
+            QuestionScreen(
+                modifier = Modifier.padding(innerPadding)
+            )
+        }
     }
 }

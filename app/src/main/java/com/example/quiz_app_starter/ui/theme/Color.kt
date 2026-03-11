@@ -1,20 +1,17 @@
 package com.example.quiz_app_starter.ui.theme
 
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Color.Companion.Cyan
-import androidx.compose.ui.graphics.Color.Companion.Green
-val Purple40 = Color(0xFF7E57C2)
-val PurpleGrey40 = Color(0xFF8E24AA)
-val Pink40 = Color(0xFFEC407A)
-
-val Purple80 = Color(0xFFB39DDB)
-val PurpleGrey80 = Color(0xFFC5CAE9)
-val Pink80 = Color(0xFFF48FB1)
 //Hier ändern und dann laden
+// Eigene Teal-Palette
+val Teal200 = Color(0xFF80CBC4)
+val Teal500 = Color(0xFF009688)
+val Teal700 = Color(0xFF00796B)
+
 // Light theme
-val LightPrimary = Color(0xFF6200EE)
-val LightPrimaryVariant = Color(0xFF3700B3)
-val LightSecondary = Color(0xFF03DAC5)
+val LightPrimary = Teal500          // Hauptfarbe Teal
+val LightPrimaryVariant = Teal700   // Dunkleres Teal für Statusleiste
+val LightSecondary = Teal200        // Helleres Teal für Akzente
+
 val LightBackground = Color(0xFFFFFFFF)
 val LightSurface = Color(0xFFFFFFFF)
 val LightOnPrimary = Color(0xFFFFFFFF)
@@ -23,9 +20,9 @@ val LightOnBackground = Color(0xFF000000)
 val LightOnSurface = Color(0xFF000000)
 
 // Dark theme
-val DarkPrimary = Color(0xFFBB86FC)
-val DarkPrimaryVariant = Color(0xFF3700B3)
-val DarkSecondary = Color(0xFF03DAC5)
+val DarkPrimary = Teal200           // Im Dark Mode nimmt man eher hellere Töne als Primary
+val DarkPrimaryVariant = Teal700
+val DarkSecondary = Teal200
 val DarkBackground = Color(0xFF121212)
 val DarkSurface = Color(0xFF121212)
 val DarkOnPrimary = Color(0xFF000000)
